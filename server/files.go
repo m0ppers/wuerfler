@@ -24,6 +24,9 @@ func (s *Server) mountFileRoutes(r chi.Router) {
 			http.Error(w, http.StatusText(404), 404)
 		}
 	})
+	r.Get("/datenschutz", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, filepath.Join(frontendDir, "index.html"))
+	})
 	fs := http.FileServer(http.Dir(frontendDir))
 	r.Get("/*", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fs.ServeHTTP(w, r)

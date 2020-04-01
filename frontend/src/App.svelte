@@ -1,6 +1,7 @@
 <script>
   import { Router } from "svelte-router-spa";
   import Home from "./Home.svelte";
+  import Datenschutz from "./Datenschutz.svelte";
   import Room from "./Room.svelte";
   import NavBar from "./NavBar.svelte";
   import Alerts from "./Alerts.svelte";
@@ -9,6 +10,10 @@
     {
       name: "/",
       component: Home
+    },
+    {
+      name: "/datenschutz",
+      component: Datenschutz
     },
     {
       name: "/rooms/:name",
@@ -20,15 +25,6 @@
 <style>
   main {
     flex: 1;
-  }
-
-  footer {
-    width: 100%;
-    /* Set the fixed height of the footer here */
-  }
-
-  ul {
-    text-align: right;
   }
 </style>
 
