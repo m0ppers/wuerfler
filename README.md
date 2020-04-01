@@ -22,9 +22,9 @@ This will result in a `wuerfler` binary and a `frontend-build` directory.
 
 There are a few environment variables to control wuerfler:
 
-WUERFLER_PORT=80 HTTP Port
-WUERFLER_SECUREPORT= HTTPS Port. Also needs WUERFLER_SECUREHOSTNAME
-WUERFLER_SECUREHOSTNAME=example.com
+- WUERFLER_PORT=80 HTTP Port
+- WUERFLER_SECUREPORT= HTTPS Port. Also needs WUERFLER_SECUREHOSTNAME
+- WUERFLER_SECUREHOSTNAME=example.com
 
 ## Local development
 
