@@ -36,12 +36,5 @@
 <main class="bg-light">
   <Router {routes} />
 </main>
-<footer>
-  <ul class="m-3">
-    <li class="mx-3 d-inline">
-      <a href="http://github.com/m0ppers/wuerfler">github</a>
-    </li>
-  </ul>
-</footer>
 
 <Alerts />
