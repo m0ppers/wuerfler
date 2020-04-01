@@ -62,6 +62,17 @@ func NewServer(conf config.Config) *Server {
 	return server
 }
 
+func redirect(w http.ResponseWriter, req *http.Request) {
+	// remove/add not default ports from req.Host
+	target := "https://" + req.Host + req.URL.Path
+	if len(req.URL.RawQuery) > 0 {
+		target += "?" + req.URL.RawQuery
+	}
+	http.Redirect(w, req, target,
+		// see comments below and consider the codes 308, 302, or 301
+		http.StatusFound)
+}
+
 // Run runs the server
 func (s *Server) Run(ctx context.Context) error {
 	var httpsServer *http.Server
@@ -93,7 +104,7 @@ func (s *Server) Run(ctx context.Context) error {
 			TLSConfig: m.TLSConfig(),
 			Handler:   s.router,
 		}
-		httpHandler = m.HTTPHandler(s.router)
+		httpHandler = m.HTTPHandler(http.HandlerFunc(redirect))
 	} else {
 		httpHandler = s.router
 	}
