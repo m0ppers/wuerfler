@@ -33,7 +33,7 @@
   <div class="container">
     <h1>WÜRFLER</h1>
     <p class="lead text-muted">
-      Your online RPG Companion to roll dices with your party
+      Your online RPG companion to roll dices with your party
     </p>
     <Form on:submit={handleSubmit}>
       <FormGroup>
