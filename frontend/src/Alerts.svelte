@@ -13,7 +13,7 @@
 </style>
 
 <div>
-  {#each $alerts as alert, i}
+  {#each $alerts as alert}
     <Alert color={alert.color}>{alert.text}</Alert>
   {/each}
 </div>
