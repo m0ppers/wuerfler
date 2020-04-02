@@ -251,7 +251,7 @@ func sendUserUpdates(log *logrus.Entry, rollers []*Roller) {
 	}
 
 	for _, member := range rollers {
-		others := make([]string, len(rollers)-1, len(rollers))
+		others := make([]string, 0, len(rollers)-1)
 		for _, other := range rollers {
 			if other.Name != member.Name {
 				others = append(others, other.Name)
