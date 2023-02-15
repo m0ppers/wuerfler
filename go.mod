@@ -7,7 +7,7 @@ require (
 	github.com/goombaio/namegenerator v0.0.0-20181006234301-989e774b106e
 	github.com/gorilla/websocket v1.4.2
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/prometheus/client_golang v1.5.1
-	github.com/sirupsen/logrus v1.5.0
-	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59
+	github.com/prometheus/client_golang v1.11.1
+	github.com/sirupsen/logrus v1.6.0
+	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 )
