@@ -26,6 +26,9 @@ There are a few environment variables to control wuerfler:
 - WUERFLER_SECUREPORT= HTTPS Port. Also needs WUERFLER_SECUREHOSTNAME
 - WUERFLER_SECUREHOSTNAME=example.com
 
+Please note that wuerfler will try to find the frontend relative to its working directory.
+So make sure you add the working directory if you want to run it as a service.
+
 ## Local development
 
 `WUERFLER_DEBUG=1 WUERFLER_PORT=3000 go run main.go`
